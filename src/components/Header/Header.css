@@ -1,0 +1,155 @@
+.header {
+    background-color: #000000;
+    margin-bottom: 90px;
+}
+
+.header-cont {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex: 1;
+
+    padding: 40px;
+
+    color: #333;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #82ca9c;
+
+    gap: 8px;
+}
+
+.logo a {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+
+.nav a {
+    font-size: 14px;
+    font-weight: 500;
+    transition: .3s;
+    border-radius: 5px;
+
+}
+
+
+.icons img {
+    filter: invert();
+}
+
+.nav-basket {
+
+
+
+}
+
+.nav-basket button {
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.nav-bs{
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+.glow-on-txt {
+
+
+
+    color: #000000;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 0;
+    border-radius: 5px;
+
+}
+
+.glow-on-txt:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: txt 20s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.glow-on-txt:active:after {
+    background: transparent;
+}
+
+.glow-on-txt:hover:before {
+    opacity: 1;
+}
+
+.glow-on-txt:hover:after {
+    background-color: transparent;
+}
+
+.glow-on-txt:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: .3s;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+@keyframes txt {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
